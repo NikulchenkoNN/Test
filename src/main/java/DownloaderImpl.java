@@ -1,4 +1,3 @@
-
 import org.springframework.stereotype.Component;
 
 import java.io.FileOutputStream;
@@ -20,6 +19,7 @@ public class DownloaderImpl implements Downloader {
         URL website = new URL(url);
         ReadableByteChannel rbc = Channels.newChannel(website.openStream());
         FileOutputStream fos = new FileOutputStream(filePath);
-        fos.getChannel().transferFrom(rbc,0,Long.MAX_VALUE);
+        fos.getChannel().transferFrom(rbc,0, Long.MAX_VALUE);
+        fos.close();
     }
 }

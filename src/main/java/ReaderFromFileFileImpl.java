@@ -16,6 +16,7 @@ public class ReaderFromFileFileImpl implements ReaderFromFile {
         while (br.ready()) {
             urls.add(br.readLine());
         }
+        br.close();
         return urls;
     }
 }
