@@ -9,9 +9,15 @@ import java.nio.channels.ReadableByteChannel;
 
 @Component
 public class DownloaderImpl implements Downloader {
+    /**
+     *
+     * @param url url to download from
+     * @param filePath path to download
+     * @throws IOException
+     */
     @Override
-    public void download(String fileAddress, String filePath) throws IOException {
-        URL website = new URL(fileAddress);
+    public void download(String url, String filePath) throws IOException {
+        URL website = new URL(url);
         ReadableByteChannel rbc = Channels.newChannel(website.openStream());
         FileOutputStream fos = new FileOutputStream(filePath);
         fos.getChannel().transferFrom(rbc,0,Long.MAX_VALUE);

@@ -8,6 +8,7 @@ import java.util.List;
 
 @Component
 public class ReaderFromFileFileImpl implements ReaderFromFile {
+
     @Override
     public List<String> readFromFile(String fileName) throws IOException {
         ArrayList<String> urls = new ArrayList<>();
