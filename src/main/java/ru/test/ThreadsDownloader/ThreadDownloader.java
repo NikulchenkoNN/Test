@@ -1,5 +1,9 @@
-import com.google.common.util.concurrent.RateLimiter;
+package ru.test.ThreadsDownloader;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import ru.test.Downloader.DownloaderImpl;
+import ru.test.ReaderFromFile.ReaderFromFileFileImpl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,27 +14,36 @@ import java.util.concurrent.Executors;
 
 @Component
 public class ThreadDownloader {
+
+    @Autowired
     ReaderFromFileFileImpl reader;
+    @Autowired
     DownloaderImpl downloader;
 
     public void threads() throws IOException {
-        System.out.println("enter path to text file");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("enter path to text file");
         String filePath = br.readLine();
+
+        System.out.println("enter path to download");
+        String destDirPath = br.readLine();
+
         System.out.println("enter rate limit to download");
         double rateLimit = Double.parseDouble(br.readLine());
-        List<String> urlsList = reader.readFromFile(br.readLine());
+        br.close();
+
+        List<String> urlsList = reader.readFromFile(filePath);
+
         ExecutorService executorService = Executors.newFixedThreadPool(5);
-        RateLimiter rateLimiter = RateLimiter.create(rateLimit);
         for (String str : urlsList) {
             executorService.submit(() -> {
-                rateLimiter.acquire();
                 try {
-                    downloader.download(str, filePath);
+                    downloader.download(str, destDirPath, rateLimit);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             });
         }
+        executorService.shutdown();
     }
 }
