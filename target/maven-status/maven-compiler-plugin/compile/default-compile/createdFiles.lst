@@ -1,0 +1,8 @@
+ru\test\Downloader\DownloaderImpl.class
+ru\test\ThreadsDownloader\ThreadDownloader.class
+ru\test\ReaderFromFile\ReaderFromFile.class
+ru\test\Downloader\Downloader.class
+ru\test\ReaderFromFile\ReaderFromFileFileImpl.class
+ru\test\SpringConfig\SpringConfig.class
+ru\test\Downloader\SocketDownloader.class
+ru\test\Main.class

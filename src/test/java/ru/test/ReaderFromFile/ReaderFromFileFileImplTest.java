@@ -22,13 +22,14 @@ public class ReaderFromFileFileImplTest {
 
     @Test
     public void lightDownloader() throws IOException {
+
         DownloaderImpl downloader = new DownloaderImpl();
 
-
         long start = System.nanoTime();
-        downloader.download("https://vargr.ru/dmod-white/D%20Mod%20White%20v.7.7.exe", "d:/dir", 100);
+        downloader.download("https://vargr.ru/dmod-white/D%20Mod%20White%20v.7.7.exe", "d:/dir1", 50);
         long end = System.nanoTime();
         System.out.println((end - start)/1_000_000_000);
+
     }
 
     @Test

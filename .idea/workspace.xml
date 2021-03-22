@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d960689-594d-4018-81b0-8fbc4cc288f4" name="Default Changelist" comment="Spring deps">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/ThrottledOutputStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_1_android.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_30_1_jre.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestTask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Downloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/Downloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DownloaderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/DownloaderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ReaderFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/ReaderFromFile/ReaderFromFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ReaderFromFileFileImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/ReaderFromFile/ReaderFromFileFileImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/SpringConfig/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ThreadDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/ThreadsDownloader/ThreadDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/DownloaderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/DownloaderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/SocketDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/SocketDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/test/Downloader/DownloaderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/Downloader/DownloaderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/test/Downloader/SocketDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/Downloader/SocketDownloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/test/ReaderFromFile/ReaderFromFileFileImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/ReaderFromFile/ReaderFromFileFileImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +56,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -72,7 +77,7 @@
       <recent name="ru.test.ReaderFromFile" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReaderFromFileFileImplTest.socketDownloader">
+  <component name="RunManager" selected="JUnit.ReaderFromFileFileImplTest.lightDownloader">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.test.Main" />
       <module name="TestTask" />
@@ -104,6 +109,22 @@
       <option name="PACKAGE_NAME" value="ru.test.ReaderFromFile" />
       <option name="MAIN_CLASS_NAME" value="ru.test.ReaderFromFile.ReaderFromFileFileImplTest" />
       <option name="METHOD_NAME" value="downloader" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReaderFromFileFileImplTest.lightDownloader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.test.ReaderFromFile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.test.ReaderFromFile" />
+      <option name="MAIN_CLASS_NAME" value="ru.test.ReaderFromFile.ReaderFromFileFileImplTest" />
+      <option name="METHOD_NAME" value="lightDownloader" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,6 +164,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReaderFromFileFileImplTest.lightDownloader" />
         <item itemvalue="JUnit.ReaderFromFileFileImplTest.socketDownloader" />
         <item itemvalue="JUnit.ReaderFromFileFileImplTest.downloader" />
         <item itemvalue="Application.Main" />
@@ -165,6 +187,8 @@
       <workItem from="1616235356832" duration="3747000" />
       <workItem from="1616394404521" duration="14459000" />
       <workItem from="1616414484178" duration="4485000" />
+      <workItem from="1616425180017" duration="513000" />
+      <workItem from="1616425727214" duration="7467000" />
     </task>
     <task id="LOCAL-00001" summary="Added ReaderFromFile and Downloader">
       <created>1616222972436</created>
