@@ -1,3 +1,5 @@
+package ru.test.ReaderFromFile;
+
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
