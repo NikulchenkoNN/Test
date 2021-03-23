@@ -2,10 +2,8 @@ package ru.test.Downloader;
 
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,12 +12,16 @@ import java.nio.file.Path;
 public class DownloaderImpl implements Downloader {
 
     @Override
-    public void download(String url, String filePath, double rateLimit) throws IOException {
+    public void download(String url, String filePath, double rateLimit) {
         BufferedInputStream bis = null;
         FileOutputStream fos = null;
         ThrottledOutputStream tos = null;
         if (!Files.isDirectory(Path.of(filePath))) {
-            Files.createDirectory(Path.of(filePath));
+            try {
+                Files.createDirectory(Path.of(filePath));
+            } catch (IOException e) {
+                System.out.println("can not create directory or directory already exist");
+            }
         }
         File file = new File(filePath, url.substring(url.lastIndexOf("/")));
         if (!file.exists()) {
@@ -33,16 +35,27 @@ public class DownloaderImpl implements Downloader {
                 while ((count = bis.read(bytes)) != -1) {
                     tos.write(bytes, 0, count);
                 }
+            } catch (FileNotFoundException e) {
+                System.out.println("wrong file address");
+            } catch (MalformedURLException e) {
+                System.out.println("not valid url");
+            } catch (IOException e) {
+                e.printStackTrace();
             } finally {
-                if (bis != null) {
-                    bis.close();
+                try {
+                    if (bis != null) {
+                        bis.close();
+                    }
+                    if (fos != null) {
+                        fos.close();
+                    }
+                    if (tos != null) {
+                        tos.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-                if (fos != null) {
-                    fos.close();
-                }
-                if (tos != null) {
-                    tos.close();
-                }
+
             }
         } else {
             System.out.printf("file with name %s already exist", url.substring(url.lastIndexOf("/")));

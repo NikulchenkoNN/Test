@@ -20,28 +20,48 @@ public class ThreadDownloader {
     @Autowired
     DownloaderImpl downloader;
 
-    public void threads() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("enter path to text file");
-        String filePath = br.readLine();
+    String filePath = null;
+    String destDirPath = null;
+    double rateLimit = 0;
+    BufferedReader br = null;
 
-        System.out.println("enter path to download");
-        String destDirPath = br.readLine();
+    public void threadDownloader() {
 
-        System.out.println("enter rate limit to download");
-        double rateLimit = Double.parseDouble(br.readLine());
-        br.close();
+        br = new BufferedReader(new InputStreamReader(System.in));
 
-        List<String> urlsList = reader.readFromFile(filePath);
-
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
-        for (String str : urlsList) {
-            executorService.submit(() -> {
+        try {
+            System.out.println("enter path to text file");
+            filePath = br.readLine();
+        } catch (IOException e) {
+            System.out.println("not valid path to text file");
+        }
+        try {
+            System.out.println("enter path to download");
+            destDirPath = br.readLine();
+        } catch (IOException e) {
+            System.out.println("not valid path to download directory");
+        }
+        try {
+            System.out.println("enter rate limit to download");
+            rateLimit = Double.parseDouble(br.readLine());
+        } catch (IOException e) {
+            System.out.println("not valid rate limit");
+        } finally {
+            if (br != null) {
                 try {
-                    downloader.download(str, destDirPath, rateLimit);
+                    br.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+            }
+        }
+
+        List<String> urlsList = reader.readFromFile(filePath);
+
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        for (String str : urlsList) {
+            executorService.submit(() -> {
+                downloader.download(str, destDirPath, rateLimit);
             });
         }
         executorService.shutdown();
