@@ -1,23 +1,16 @@
 package ru.test.ReaderFromFile;
 
-
-import com.google.common.base.Charsets;
-import com.google.common.io.Resources;
 import org.junit.Assert;
 import org.junit.Test;
 import ru.test.Downloader.DownloaderImpl;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReaderFromFileFileImplTest {
     @Test
-    public void reader() throws IOException {
+    public void reader() {
         ReaderFromFileFileImpl reader = new ReaderFromFileFileImpl();
 
         File file = new File(getClass().getClassLoader().getResource("test.txt").getFile());
