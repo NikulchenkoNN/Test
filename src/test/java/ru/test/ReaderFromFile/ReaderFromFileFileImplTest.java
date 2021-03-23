@@ -33,12 +33,15 @@ public class ReaderFromFileFileImplTest {
     @Test
     public void downloader() {
         DownloaderImpl downloader = new DownloaderImpl();
+        double setedRate = 500;
         long start = System.nanoTime();
-        downloader.download("https://download.jetbrains.com/go/goland-2020.3.4.exe", "d:/dir3", 500);
+        downloader.download("https://vargr.ru/dmod-white/D%20Mod%20White%20v.7.7.exe", "d:/dir3", setedRate);
         long end = System.nanoTime();
         long time = (end-start)/1_000_000_000;
-        System.out.printf("downloading time %d \n", time);
-        File file = new File("d:/dir3/goland-2020.3.4.exe");
-        System.out.println("average downloading speed is " + (file.length()/1024)/time + " kb/s");
+//        System.out.printf("downloading time %d \n", time);
+        File file = new File("d:/dir3/D%20Mod%20White%20v.7.7.exe");
+//        System.out.println("average downloading speed is " + (file.length()/1024)/time + " kb/s");
+        double actualRate = (file.length()/1024)/time;
+        Assert.assertTrue(actualRate < setedRate);
     }
 }
