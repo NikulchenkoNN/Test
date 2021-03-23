@@ -4,23 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d960689-594d-4018-81b0-8fbc4cc288f4" name="Default Changelist" comment="Spring deps">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_10_19.xml" afterDir="false" />
+    <list default="true" id="9d960689-594d-4018-81b0-8fbc4cc288f4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestTask.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/DownloaderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/DownloaderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/ReaderFromFile/ReaderFromFileFileImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/ReaderFromFile/ReaderFromFileFileImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/ThreadsDownloader/ThreadDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/ThreadsDownloader/ThreadDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/test/Downloader/DownloaderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/Downloader/DownloaderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/test/Downloader/SocketDownloader.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/test/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/test/ReaderFromFile/ReaderFromFileFileImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/ReaderFromFile/ReaderFromFileFileImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/test/ThreadsDownloader/ThreadDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/ThreadsDownloader/ThreadDownloader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +51,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -78,7 +70,7 @@
       <recent name="ru.test.ReaderFromFile" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ReaderFromFileFileImplTest.reader">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.test.Main" />
       <module name="TestTask" />
@@ -92,15 +84,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReaderFromFileFileImplTest.downloader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TestTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.test.ReaderFromFile.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.test.ReaderFromFile" />
+      <option name="MAIN_CLASS_NAME" value="ru.test.ReaderFromFile.ReaderFromFileFileImplTest" />
+      <option name="METHOD_NAME" value="downloader" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,22 +143,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReaderFromFileFileImplTest.socketDownloader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TestTask" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.test.ReaderFromFile.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.test.ReaderFromFile" />
-      <option name="MAIN_CLASS_NAME" value="ru.test.ReaderFromFile.ReaderFromFileFileImplTest" />
-      <option name="METHOD_NAME" value="socketDownloader" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReaderFromFileFileImplTest.testDownload" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TestTask" />
       <extension name="coverage">
@@ -171,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ReaderFromFileFileImplTest.reader" />
+        <item itemvalue="JUnit.ReaderFromFileFileImplTest.downloader" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ReaderFromFileFileImplTest.lightDownloader" />
-        <item itemvalue="JUnit.ReaderFromFileFileImplTest.reader" />
         <item itemvalue="JUnit.ReaderFromFileFileImplTest.testDownload" />
-        <item itemvalue="JUnit.ReaderFromFileFileImplTest.socketDownloader" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +187,8 @@
       <workItem from="1616425180017" duration="513000" />
       <workItem from="1616425727214" duration="7467000" />
       <workItem from="1616478001726" duration="3978000" />
-      <workItem from="1616518727891" duration="5404000" />
+      <workItem from="1616518727891" duration="5876000" />
+      <workItem from="1616525950323" duration="1994000" />
     </task>
     <task id="LOCAL-00001" summary="Added ReaderFromFile and Downloader">
       <created>1616222972436</created>
@@ -220,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616238850152</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Spring deps">
+      <created>1616524481791</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616524481792</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

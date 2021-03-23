@@ -58,7 +58,7 @@ public class DownloaderImpl implements Downloader {
 
             }
         } else {
-            System.out.printf("file with name %s already exist", url.substring(url.lastIndexOf("/")));
+            System.out.printf("file with name %s already exist \n", url.substring(url.lastIndexOf("/")));
         }
     }
 }
