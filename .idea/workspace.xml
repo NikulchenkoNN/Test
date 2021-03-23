@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d960689-594d-4018-81b0-8fbc4cc288f4" name="Default Changelist" comment="Spring deps">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/ThrottledOutputStream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_1_android.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_30_1_jre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/ThrottledInputStream.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestTask.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TestTask.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/DownloaderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/DownloaderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/SocketDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/SocketDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/test/Downloader/SocketDownloader.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/test/Downloader/DownloaderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/Downloader/DownloaderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/test/Downloader/SocketDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/Downloader/SocketDownloader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/test/ReaderFromFile/ReaderFromFileFileImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/test/ReaderFromFile/ReaderFromFileFileImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ru/test/ReaderFromFile/ReaderFromFileFileImplTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,15 +74,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -189,6 +176,7 @@
       <workItem from="1616414484178" duration="4485000" />
       <workItem from="1616425180017" duration="513000" />
       <workItem from="1616425727214" duration="7467000" />
+      <workItem from="1616478001726" duration="3978000" />
     </task>
     <task id="LOCAL-00001" summary="Added ReaderFromFile and Downloader">
       <created>1616222972436</created>

@@ -1,6 +1,5 @@
 package ru.test.Downloader;
 
-import com.google.common.util.concurrent.RateLimiter;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedInputStream;
@@ -8,18 +7,12 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.nio.channels.Channels;
-import java.nio.channels.ReadableByteChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 @Component
 public class DownloaderImpl implements Downloader {
-    /**
-     * @param url      url to download from
-     * @param filePath path to download
-     * @throws IOException
-     */
+
     @Override
     public void download(String url, String filePath, double rateLimit) throws IOException {
         BufferedInputStream bis = null;
@@ -51,6 +44,8 @@ public class DownloaderImpl implements Downloader {
                     tos.close();
                 }
             }
+        } else {
+            System.out.printf("file with name %s already exist", url.substring(url.lastIndexOf("/")));
         }
     }
 }
