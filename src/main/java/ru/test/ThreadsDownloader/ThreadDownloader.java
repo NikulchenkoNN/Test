@@ -1,67 +1,64 @@
 package ru.test.ThreadsDownloader;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import ru.test.Downloader.Downloader;
 import ru.test.Downloader.DownloaderImpl;
+import ru.test.ReaderFromFile.ReaderFromFile;
 import ru.test.ReaderFromFile.ReaderFromFileFileImpl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Component
 public class ThreadDownloader {
-
-    @Autowired
-    ReaderFromFileFileImpl reader;
-    @Autowired
-    DownloaderImpl downloader;
+    ReaderFromFile reader;
+    Downloader downloader;
 
     String filePath = null;
-    String destDirPath = null;
-    double rateLimit = 0;
-    BufferedReader br = null;
 
-    public void threadDownloader() {
+    @Value("${default.destDirPath}")
+    String destDirPath;
+    @Value("${default.rateLimit}")
+    double rateLimit;
 
-        br = new BufferedReader(new InputStreamReader(System.in));
+    public void threadDownloader() throws IOException {
 
-        try {
+
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
             System.out.println("enter path to text file");
             filePath = br.readLine();
         } catch (IOException e) {
-            System.out.println("not valid path to text file");
+            e.printStackTrace();
         }
+        reader = new ReaderFromFileFileImpl();
+        downloader = new DownloaderImpl();
+
+
         try {
-            System.out.println("enter path to download");
-            destDirPath = br.readLine();
+            Files.createDirectory(Path.of(destDirPath));
         } catch (IOException e) {
-            System.out.println("not valid path to download directory");
+            System.out.println("can not create directory or directory already exist");
         }
-        try {
-            System.out.println("enter rate limit to download");
-            rateLimit = Double.parseDouble(br.readLine());
-        } catch (IOException e) {
-            System.out.println("not valid rate limit");
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
+
 
         List<String> urlsList = reader.readFromFile(filePath);
 
         ExecutorService executorService = Executors.newFixedThreadPool(2);
         for (String str : urlsList) {
             executorService.submit(() -> {
-                downloader.download(str, destDirPath, rateLimit);
+                try {
+                    downloader.download(str, destDirPath, rateLimit);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             });
         }
         executorService.shutdown();
