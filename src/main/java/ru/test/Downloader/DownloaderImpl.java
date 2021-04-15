@@ -26,15 +26,11 @@ public class DownloaderImpl implements Downloader {
                 while ((count = bis.read(bytes)) != -1) {
                     tos.write(bytes, 0, count);
                 }
-            } catch (FileNotFoundException e) {
-                System.out.println("wrong file address");
-            } catch (MalformedURLException e) {
-                System.out.println("not valid url");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         } else {
-            System.out.printf("file with name %s already exist \n", url.substring(url.lastIndexOf("/")));
+            System.out.printf("file %s already exist \n", url.substring(url.lastIndexOf("/")));
         }
     }
 }

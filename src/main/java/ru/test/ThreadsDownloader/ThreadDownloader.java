@@ -1,6 +1,5 @@
 package ru.test.ThreadsDownloader;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import ru.test.Downloader.Downloader;
@@ -28,6 +27,8 @@ public class ThreadDownloader {
     String destDirPath;
     @Value("${default.rateLimit}")
     double rateLimit;
+    @Value("${default.numberOfThreads}")
+    int numberOfThreads;
 
     public void threadDownloader() throws IOException {
 
@@ -38,20 +39,22 @@ public class ThreadDownloader {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         reader = new ReaderFromFileFileImpl();
         downloader = new DownloaderImpl();
 
-
-        try {
-            Files.createDirectory(Path.of(destDirPath));
-        } catch (IOException e) {
-            System.out.println("can not create directory or directory already exist");
+        if (!Files.isDirectory(Path.of(destDirPath))) {
+            try {
+                Files.createDirectory(Path.of(destDirPath));
+            } catch (IOException e) {
+                System.out.println("can not create directory or directory already exist");
+            }
         }
 
 
         List<String> urlsList = reader.readFromFile(filePath);
 
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(numberOfThreads);
         for (String str : urlsList) {
             executorService.submit(() -> {
                 try {

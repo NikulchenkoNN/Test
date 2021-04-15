@@ -20,7 +20,7 @@ public class ReaderFromFileFileImpl implements ReaderFromFile {
                 urls.add(br.readLine());
             }
         } catch (IOException e) {
-            System.out.println("can not read from file");
+            e.printStackTrace();
         }
         return urls;
     }
