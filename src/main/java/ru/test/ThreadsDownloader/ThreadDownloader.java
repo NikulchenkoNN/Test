@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import ru.test.Downloader.Downloader;
 import ru.test.Downloader.DownloaderImpl;
 import ru.test.ReaderFromFile.ReaderFromFile;
-import ru.test.ReaderFromFile.ReaderFromFileFileImpl;
+import ru.test.ReaderFromFile.ReaderFromFileImpl;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,7 +40,7 @@ public class ThreadDownloader {
             e.printStackTrace();
         }
 
-        reader = new ReaderFromFileFileImpl();
+        reader = new ReaderFromFileImpl();
         downloader = new DownloaderImpl();
 
         if (!Files.isDirectory(Path.of(destDirPath))) {

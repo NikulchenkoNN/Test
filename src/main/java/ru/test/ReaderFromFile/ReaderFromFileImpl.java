@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class ReaderFromFileFileImpl implements ReaderFromFile {
+public class ReaderFromFileImpl implements ReaderFromFile {
 
 
     @Override

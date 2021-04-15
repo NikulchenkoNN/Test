@@ -3,10 +3,7 @@ package ru.test.Downloader;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 @Component
 public class DownloaderImpl implements Downloader {
@@ -22,9 +19,9 @@ public class DownloaderImpl implements Downloader {
                     ThrottledOutputStream tos = new ThrottledOutputStream(fos, rateLimit)
             ) {
                 final byte[] bytes = new byte[1024];
-                int count;
-                while ((count = bis.read(bytes)) != -1) {
-                    tos.write(bytes, 0, count);
+
+                while (bis.read(bytes) != -1) {
+                    tos.write(bytes);
                 }
             } catch (IOException e) {
                 e.printStackTrace();

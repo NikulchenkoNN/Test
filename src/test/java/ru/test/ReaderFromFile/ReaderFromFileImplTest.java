@@ -8,10 +8,10 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReaderFromFileFileImplTest {
+public class ReaderFromFileImplTest {
     @Test
     public void reader() {
-        ReaderFromFileFileImpl reader = new ReaderFromFileFileImpl();
+        ReaderFromFileImpl reader = new ReaderFromFileImpl();
 
         File file = new File(getClass().getClassLoader().getResource("test.txt").getFile());
         List<String> strings = reader.readFromFile(String.valueOf(file));
