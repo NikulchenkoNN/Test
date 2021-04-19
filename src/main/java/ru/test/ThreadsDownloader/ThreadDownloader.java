@@ -20,7 +20,6 @@ import java.util.concurrent.Executors;
 public class ThreadDownloader {
     ReaderFromFile reader;
     Downloader downloader;
-
     String filePath = null;
 
     @Value("${default.destDirPath}")

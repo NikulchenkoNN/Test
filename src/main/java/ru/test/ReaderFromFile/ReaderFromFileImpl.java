@@ -11,7 +11,6 @@ import java.util.List;
 @Component
 public class ReaderFromFileImpl implements ReaderFromFile {
 
-
     @Override
     public List<String> readFromFile(String fileName) {
         ArrayList<String> urls = new ArrayList<>();

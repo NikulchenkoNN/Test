@@ -19,7 +19,6 @@ public class DownloaderImpl implements Downloader {
                     ThrottledOutputStream tos = new ThrottledOutputStream(fos, rateLimit)
             ) {
                 final byte[] bytes = new byte[1024];
-
                 while (bis.read(bytes) != -1) {
                     tos.write(bytes);
                 }
